@@ -1,33 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@charles-alex8888 
-luckman666
-/
-centosinfo
-1
-00
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-centosinfo/centosinfo.sh
-@luckman666
-luckman666 Add files via upload
-Latest commit b5ba318 14 hours ago
- History
- 1 contributor
-121 lines (94 sloc)  4.6 KB
-  
 #!/bin/bash
 # 获取要监控的本地服务器IP地址
 IP=`ifconfig | grep inet | grep -vE 'inet6|127.0.0.1' | awk '{print $2}'`
