@@ -17,6 +17,21 @@ EOF
 source /etc/profile
 ~~~
 
+# 二进制安装
+~~~ bash
+version=v14.16.0
+wget https://nodejs.org/dist/v14.16.0/node-$version-linux-x64.tar.xz
+tar -xf node-$version-linux-x64.tar.xz
+mv node-$version-linux-x64 /usr/local/nodejs
+
+cat <<'EOF' > /etc/profile.d/nodejs.sh
+export NODEJS_HOME=/usr/local/nodejs
+export PATH=$NODEJS_HOME/bin:$PATH
+EOF
+
+source /etc/profile
+~~~
+
 # yum安装 
 ~~~ bash
 # 安装源
