@@ -17,7 +17,7 @@ EOF
 source /etc/profile
 ~~~
 
-# yum安装 （版本过低）
+# yum安装 
 ~~~ bash
 # 安装源
 curl -sL https://rpm.nodesource.com/setup_14.x | bash -
