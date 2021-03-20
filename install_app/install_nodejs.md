@@ -1,4 +1,5 @@
 # 安装nodejs
+~~~ bash
 install_dir={path}
 wget https://npm.taobao.org/mirrors/node/v11.0.0/node-v11.0.0.tar.gz
 tar -xf node-v11.0.0.tar.gz
@@ -14,3 +15,4 @@ export NODE_PATH=$NODE_HOME/lib/node_modules
 EOF
 
 source /etc/profile
+~~~
