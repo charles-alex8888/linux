@@ -30,4 +30,4 @@ sed -i s/rocketmq.config.namesrvAdd/rocketmq.config.namesrvAddr=localhost:9876/g
 mvn clean package -Dmaven.test.skip=true
 
 ## 4. 运行
-java -jar target/rocketmq-console-ng-1.0.0.jar [--rocketmq.config.namesrvAddr='localhost:9876']
+> java -jar target/rocketmq-console-ng-1.0.0.jar [--rocketmq.config.namesrvAddr='localhost:9876']
