@@ -37,3 +37,21 @@ mvn clean package -Dmaven.test.skip=true
 ## 4. 运行
 > java -jar target/rocketmq-console-ng-1.0.0.jar [--rocketmq.config.namesrvAddr='localhost:9876']
 
+
+# 配置外网访问
+~~~ bash
+cat <<'EOF' >> conf/broker.conf
+namesrvAddr={ip}:9876
+brokerIP1={ip}
+brokerIP1={ip}
+autoCreateTopicEnable=true 
+EOF
+
+# 停止broker
+sh bin/mqshutdown broker
+# 启动broker
+nohup sh bin/mqbroker -c conf/broker.conf &
+~~~
+
+
+
