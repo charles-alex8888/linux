@@ -15,6 +15,11 @@ cd distribution/target/rocketmq-4.8.0/rocketmq-4.8.0
 
 ## 4. Start Broker
 > nohup sh bin/mqbroker -n localhost:9876 &
+#### 关闭 
+~~~ bash
+sh bin/mqshutdown broker
+sh bin/mqshutdown namesrv
+~~~
 
 # web console部署
 ## 1. 下载
@@ -31,3 +36,4 @@ mvn clean package -Dmaven.test.skip=true
 
 ## 4. 运行
 > java -jar target/rocketmq-console-ng-1.0.0.jar [--rocketmq.config.namesrvAddr='localhost:9876']
+
