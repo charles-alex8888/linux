@@ -19,7 +19,7 @@ sed -i '/^dir/d' conf/redis.conf
 echo "dir $INSTALL_DIR/redis/data" >> conf/redis.conf
 echo "requirepass `< /dev/urandom tr -cd _A-Z-a-z-0-9@#^ | head -c ${1:-20}; echo`"  >> conf/redis.conf
 
-sed -i 's/bind 127.0.0.1/bind 127.0.0.1 $IP_SEGMENT/' conf/redis.conf
+sed -i "s/bind 127.0.0.1/bind 127.0.0.1 $IP_SEGMENT/" conf/redis.conf
 sed -i 's/protected-mode yes/protected-mode no/' conf/redis.conf
 ~~~
 
