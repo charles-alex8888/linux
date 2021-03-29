@@ -37,6 +37,10 @@ nohup java -Djava.rmi.server.hostname=$HOST_IP \
       --spring.profiles.active=$ACTIVE_NAME \
       --spring.cloud.nacos.config.enabled=true \
        > output.log 2>&1 &
+   #   -Xms512m \
+   #   -Xmx512m \
+   #   -Xmn256m \
+
 #      -Dcom.sun.management.jmxremote \
 #      -Dcom.sun.management.jmxremote.port=$MONITOR_PORT \
 #      -Dcom.sun.management.jmxremote.authenticate=false \
