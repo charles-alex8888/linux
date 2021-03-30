@@ -100,8 +100,8 @@ install_docker() {
 	systemctl enable docker
 	echo "docker install succeed!!"
 }
-#install_docker_compace
-install_docker_compace() {
+#install_docker_compose
+install_docker_compose() {
 #curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 mv ./docker-compose /usr/local/bin/
 chmod +x /usr/local/bin/docker-compose 
@@ -117,7 +117,7 @@ main(){
   ulimit_config
   sysctl_config
   #install_docker
-  #install_docker_compace
+  #install_docker_compose
 
 }
 main
