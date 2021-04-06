@@ -7,6 +7,9 @@ systemctl enable iptables
 
 iptables -P INPUT ACCEPT
 iptables -F
+iptables -X
+iptables -Z
+
   
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
