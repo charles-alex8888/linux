@@ -1,5 +1,10 @@
 #!/bin/bash
 
+yum -y install iptables
+yum install iptables-services
+systemctl start iptables
+systemctl enable iptables
+
 iptables -P INPUT ACCEPT
 iptables -F
   
@@ -13,5 +18,8 @@ iptables -A OUTPUT -o lo -j ACCEPT
 iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 
 
+iptables -P INPUT DROP
+iptables -P OUTPUT DROP
 service iptables save
+
 
