@@ -35,6 +35,8 @@ system_config(){
   sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
   timedatectl set-local-rtc 1 && timedatectl set-timezone Asia/Shanghai
   yum -y install chrony && systemctl start chronyd.service && systemctl enable chronyd.service
+  sed -i '/#Port 22/a\Port 18518' /etc/ssh/sshd_config
+  systemctl restart sshd
 }
 ulimit_config(){
   echo "ulimit -SHn 102400" >> /etc/rc.local
