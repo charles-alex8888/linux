@@ -1,3 +1,4 @@
+~~~ txt
 前期准备：
 [root@localhost ~]# systemctl stop firewalld
 [root@localhost ~]# systemctl stop iptables
@@ -185,6 +186,5 @@ Escape character is ^]
 yum install -y net-tools  # 获取到IP能联网后安装网络管理工具
 
 
-
-
+~~~
 
