@@ -1,6 +1,6 @@
   ~~~ bash
    listen 443 ssl;
-   server_name  wgcdn.wgnice.com;
+   server_name  domain.com;
    ssl_certificate      /usr/local/nginx/cert/START-wgnice-com.pem;
    ssl_certificate_key  /usr/local/nginx/cert/START-wgnice-com.key;
    ssl_session_cache    shared:SSL:1m;
