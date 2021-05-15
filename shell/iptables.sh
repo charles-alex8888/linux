@@ -25,6 +25,8 @@ iptables -P INPUT DROP
 iptables -P OUTPUT DROP
 service iptables save
 
+# 多个端口
+iptables -I INPUT -p tcp -s {ip} -m  multiport  --dports 8000,8080,80 -j ACCEPT
 
 
 # 安装
