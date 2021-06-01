@@ -1,0 +1,27 @@
+[Unit]
+#描述
+Description=business-api  Service
+Wants=network-online.target
+After=network-online.target
+[Service]
+#指定用户
+User=nologin
+#最大文件打开数
+LimitNOFILE=10240
+#工作目录
+WorkingDirectory=/home/java/xxxx
+#启动任务命令
+ExecStart=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.262.b10-0.el7_8.x86_64/jre/bin/java \
+            -jar xxxx.jar \
+            --server.port=9002\
+            --spring.profiles.active=prod \
+            --spring.cloud.nacos.config.enabled=true
+#重启策略
+Restart=on-failure
+#启动间隔
+StartLimitInterval = 60
+#在启动间隔时间内 最多启动几次
+StartLimitBurst = 2
+[Install]
+#执行enable命令时，符号链接会放入/etc/systemd/system目录下以 target 名 + .wants后缀构成的子目录中
+WantedBy=multi-user.target
